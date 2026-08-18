@@ -16,9 +16,10 @@ at an Imbi instance you trust — the same one you trust with your API
 token.
 
 ## Install
+This will install the `imbi-cli` command.
 
 ```sh
-just install
+uv tool install git+https://github.com/AWeber-Imbi/imbi-cli
 ```
 
 ## Setup
