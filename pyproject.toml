@@ -5,7 +5,7 @@ description = "Command-line interface for the Imbi service registry"
 readme = "README.md"
 requires-python = ">=3.14"
 license = { text = "MIT" }
-dependencies = ["httpx>=0.28", "openapi-python-client>=0.29,<0.30"]
+dependencies = ["httpx>=0.28", "openapi-python-client>=0.29.1,<0.30"]
 
 [project.scripts]
 imbi-cli = "imbi_cli.__main__:main"

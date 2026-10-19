@@ -24,7 +24,7 @@ import typing
 import openapi_python_client
 from openapi_python_client import config as opc_config
 from openapi_python_client import parser as opc_parser
-from openapi_python_client import utils as opc_utils
+from openapi_python_client import strings as opc_strings
 from openapi_python_client.parser import errors as opc_errors
 from openapi_python_client.parser import properties as opc_properties
 
@@ -169,7 +169,7 @@ def _sources(project: typing.Any) -> tuple[dict[str, str], set[str]]:
             endpoint_collection=collection
         )
         for endpoint in collection.endpoints:
-            module = opc_utils.PythonIdentifier(endpoint.name, prefix)
+            module = opc_strings.PythonIdentifier(endpoint.name, prefix)
             sources[f"{tag_name}.{module}"] = endpoint_template.render(
                 endpoint=endpoint
             )
